@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureStorageRepository1", "AzureStorageRepository1\AzureStorageRepository1.csproj", "{AF3C8E21-C9C0-43B0-B375-7464DAC1D1FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureStorageRepository2", "AzureStorageRepository2\AzureStorageRepository2.csproj", "{C2B6C7C9-C0D6-447A-B63E-DEE931B2C601}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureStorageRepository3", "AzureStorageRepository3\AzureStorageRepository3.csproj", "{205DDD80-2759-4FA2-ADA1-105B0FB2DE38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{3A6EBD76-77AD-498C-8396-046A85CCB935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{EEF38944-6EDC-485C-B80C-AFE0A2EE7A73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", "{2411080C-663F-4557-8AC5-A1833287DD64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF3C8E21-C9C0-43B0-B375-7464DAC1D1FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF3C8E21-C9C0-43B0-B375-7464DAC1D1FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF3C8E21-C9C0-43B0-B375-7464DAC1D1FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF3C8E21-C9C0-43B0-B375-7464DAC1D1FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2B6C7C9-C0D6-447A-B63E-DEE931B2C601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B6C7C9-C0D6-447A-B63E-DEE931B2C601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B6C7C9-C0D6-447A-B63E-DEE931B2C601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B6C7C9-C0D6-447A-B63E-DEE931B2C601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{205DDD80-2759-4FA2-ADA1-105B0FB2DE38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{205DDD80-2759-4FA2-ADA1-105B0FB2DE38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{205DDD80-2759-4FA2-ADA1-105B0FB2DE38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{205DDD80-2759-4FA2-ADA1-105B0FB2DE38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A6EBD76-77AD-498C-8396-046A85CCB935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6EBD76-77AD-498C-8396-046A85CCB935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6EBD76-77AD-498C-8396-046A85CCB935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6EBD76-77AD-498C-8396-046A85CCB935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEF38944-6EDC-485C-B80C-AFE0A2EE7A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEF38944-6EDC-485C-B80C-AFE0A2EE7A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF38944-6EDC-485C-B80C-AFE0A2EE7A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEF38944-6EDC-485C-B80C-AFE0A2EE7A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2411080C-663F-4557-8AC5-A1833287DD64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2411080C-663F-4557-8AC5-A1833287DD64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2411080C-663F-4557-8AC5-A1833287DD64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2411080C-663F-4557-8AC5-A1833287DD64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

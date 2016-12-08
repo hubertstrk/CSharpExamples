@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Kaspersky" Class="DatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=Kaspersky;Integrated Security=True" SettingsObjectName="KasperskyConverter.Database.Properties.Settings" SettingsPropertyName="KasperskyConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.KasperskyOrders" Member="KasperskyOrders">
+    <Type Name="KasperskyOrder">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderNumber" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Customer" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PurchaseOrder" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebWareOrders" Member="WebWareOrders">
+    <Type Name="WebWareOrder">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderNumber" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DeliveryNumber" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cost" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="EndCustomerAddress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "Scripts/MyCoffee1.js",
+    "inputFile": "Scripts/MyCoffee1.coffee"
+  },
+  {
+    "outputFile": "Scripts/MyCoffee1.es5.js",
+    "inputFile": "Scripts/MyCoffee1.coffee"
+  }
+]
