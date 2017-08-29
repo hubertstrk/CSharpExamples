@@ -58,7 +58,7 @@ namespace DataFlow_BufferBlock
 
         private string Transform( int number )
         {
-            Thread.Sleep( 200 );
+            Thread.Sleep( 1000 );
             return number.ToString();
         }
 
@@ -93,7 +93,7 @@ namespace DataFlow_BufferBlock
             {
                 while ( true )
                 {
-                    Thread.Sleep( 180 );
+                    Thread.Sleep( 100 );
                     if ( _Cts.IsCancellationRequested )
                         break;
 
