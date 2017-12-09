@@ -44,6 +44,7 @@ namespace AsyncProcessor.Processor
 
 						OnInfoMessage( "Consumer: Before processing" );
 
+                        // download stuff using the job properties added to the queue
 						action.Invoke( item );
 
 						OnInfoMessage( "Consumer: After processing" );

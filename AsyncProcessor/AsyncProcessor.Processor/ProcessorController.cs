@@ -54,8 +54,11 @@ namespace AsyncProcessor.Processor
 
 			#region Consumer
 
+			// start consumer
+			// consumer does nothing as long as nothing is in the consumer queue
 			m_DownloadConsumer.Start( delegate (ItemDownload item) 
 			{
+				// e.g. download image from server
 				byte[] image = ReadImage( item.FileInfo.FullName );
 				Thread.Sleep( 5000 );
 			} );
@@ -64,8 +67,10 @@ namespace AsyncProcessor.Processor
 
 			#region Producer
 
+            // start producer
 			m_DownloadProducer.Start( delegate()
 			{
+                // search for new files to download and add them to consumer queue in case new files are available
 				List<FileInfo> newestFiles = SearchNewestFile();
 				if (newestFiles != null && newestFiles.Count() > 0)
 				{
@@ -76,6 +81,7 @@ namespace AsyncProcessor.Processor
 						// only add to queue in case queue is still open
 						if (!m_DownloadConsumer.Queue.IsAddingCompleted)
 						{
+                            // add download job to queue => consumer starts to download stuff according to the download job properties
 							m_DownloadConsumer.Queue.Add( download );
 							_LastProcessedUTC = fi.CreationTimeUtc;
 							OnMessage( string.Format( "Producer: Added {0} to queue", fi.Name ) );
@@ -183,45 +189,3 @@ namespace AsyncProcessor.Processor
 		}
 	}
 }
-
-//ProcessorTask = Task.Factory.StartNew( () =>
-//{
-//	try
-//	{
-//		foreach (var item in ProcessorQueue.GetConsumingEnumerable( m_Cts.Token ))
-//		{
-//			OnBeforeProcessingArgs beforeArgs = new OnBeforeProcessingArgs()
-//			{
-//				Image = item.Data,
-//				FileInfo = item.FileInfo
-//			};
-//			OnBeforeProcessing( beforeArgs );
-
-//			Stopwatch sw = new Stopwatch();
-//			sw.Start();
-
-//			Thread.Sleep( 5000 );
-
-//			OnAfterProcessingArgs afterArgs = new OnAfterProcessingArgs()
-//			{
-//				Elapsed = sw.ElapsedMilliseconds,
-//				FileInfo = beforeArgs.FileInfo
-//			};
-//			sw.Stop();
-//			sw.Reset();
-
-//			OnAfterProcessing( afterArgs );
-
-//			if (m_Cts.IsCancellationRequested)
-//			{
-//				OnMessage( string.Format( "=> Processor cancelled: {0}", ProcessorQueue.Count() ) );
-//				return;
-//			}
-//		}
-//	}
-//	catch (OperationCanceledException)
-//	{
-//		OnMessage( string.Format( "=> Processor cancelled: {0}", ProcessorQueue.Count() ) );
-//		return;
-//	}
-//} );
